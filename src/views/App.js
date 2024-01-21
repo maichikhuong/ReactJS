@@ -1,13 +1,17 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import MyComponents from './Example/MyComponents';
 
 function App() {
+  // INJECT
+  // JSX
+  // Fragment
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello world
+          Hello world with Mai Chi Khuong
         </p>
         <a
           className="App-link"
@@ -17,6 +21,8 @@ function App() {
         >
           Learn React
         </a>
+        <MyComponents />
+        {/* <MyComponents></MyComponents> */}
       </header>
     </div>
   );
