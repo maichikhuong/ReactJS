@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent';
 
+// 2 components: class component/ function component (function, arrow)
+
 function App() {
 // const App = () => {
   // JSX
