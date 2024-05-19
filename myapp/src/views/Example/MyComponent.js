@@ -13,16 +13,46 @@ class MyComponent extends React.Component {
         ]
     }
 
+    addNewJob = (job) => {
+        console.log('Check Job from Parent', job)
+        // let currentJob = this.state.arrJobs
+        // currentJob.push(job)
+        this.setState({
+            arrJobs: [...this.state.arrJobs, job]
+            // arrJobs: currentJob
+        })
+
+    }
+
+    deleteJob = (job) => {
+        let currentJob = this.state.arrJobs
+        currentJob = currentJob.filter(item => item.id !== job.id)
+        this.setState({
+            arrJobs: currentJob
+        })
+    }
+
+    componentDidUpdate(preProps, prevstate){
+        console.log('Run didupdate', 'prev state: ', prevstate, 'current state: ', this.state)
+    }
+
+    componentDidMount() {
+        console.log('>>>Run component did mount')
+    }
 
     render() {
 
         // let name = 'Khuong';
-
+        console.log("Call render", this.state)
         return (
             <>
-            <AddComponent />
+            <AddComponent 
+            addNewJob = {this.addNewJob}
+            
+            />
             <ChildComponent 
             arrJobs = {this.state.arrJobs}
+            deleteJob = {this.deleteJob}
             />
             </>
         )

@@ -1,18 +1,20 @@
 import logo from './logo.svg';
 import './App.scss';
-import MyComponent from './Example/MyComponent';
-
+import LearnUseState from './Hook/useState';
 // 2 components: class component/ function component (function, arrow)
 
 function App() {
 // const App = () => {
   // JSX
+
+  // const Name = "Khuong"
+  // const testObj = {name: 'Khuong', channel: 'KhuongChannel'}
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello word with ReactJS
+          <MyComponent />
         </p>
         <a
           className="App-link"
@@ -21,11 +23,10 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-        <MyComponent/>
+        </a> */}
 
-        {/* <MyComponent></MyComponent> */}
-
+        <LearnUseState />
+        
       </header>
     </div>
   );
